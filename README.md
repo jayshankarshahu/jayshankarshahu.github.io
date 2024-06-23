@@ -20,7 +20,7 @@ If you'd like to contribute to any of these projects, I welcome pull requests an
 
 If you have any questions, suggestions, or just want to say hi, feel free to reach out to me:
 
-- [Email](mailto:youremail@example.com)
+- [Email](mailto:jayshankershahu@example.com)
 - [LinkedIn](https://www.linkedin.com/in/jayshankar-shahu/)
 - [Stackoverflow](https://stackoverflow.com/users/23340821/apestogetherstrong)
 
