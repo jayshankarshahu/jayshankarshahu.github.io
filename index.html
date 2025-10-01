@@ -1047,7 +1047,7 @@
 
                 // Separate forks and original repos
                 const originalRepos = repos
-                    .filter(repo => !repo.fork && repo.size > 0)
+                    .filter(repo => !repo.fork)
                     .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
 
                 const forkedRepos = repos
