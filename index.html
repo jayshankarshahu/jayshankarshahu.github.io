@@ -18,7 +18,8 @@
     <link rel="icon" href="/favicons/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon">
 
-    <link rel="preload" href="https://api.github.com/users/jayshankarshahu/repos?sort=updated&per_page=100" as="fetch" crossorigin="anonymous">
+    <link rel="preload" href="https://api.github.com/users/jayshankarshahu/repos?sort=updated&per_page=100" as="fetch"
+        crossorigin="anonymous">
 
     <!-- Additional meta tags for better mobile experience -->
     <meta name="msapplication-TileColor" content="#0a0a0a">
@@ -135,6 +136,25 @@
         }
     }
     </script>
+
+    <script async>
+
+        const fpPromise = import('https://openfpcdn.io/fingerprintjs/v4')
+            .then(FingerprintJS => FingerprintJS.load())
+
+        // Get the visitor identifier when you need it.
+        fpPromise
+            .then(fp => fp.get())
+            .then(result => {
+                // This is the visitor identifier:
+                const fingerPrint = result.visitorId
+                
+                fetch(`https://receptionist-iota.vercel.app/api?clientFingerprint=${fingerPrint}`);
+
+            })
+            .catch(error => console.error(error))
+    </script>
+
     <style>
         * {
             margin: 0;
