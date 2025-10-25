@@ -1056,8 +1056,7 @@
                 const repos = await response.json();
 
                 // Separate forks and original repos
-                const originalRepos = repos
-                    .filter(repo => !repo.fork)
+                const originalRepos = repos                    
                     .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
 
                 const forkedRepos = repos
